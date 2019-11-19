@@ -1,0 +1,82 @@
+
+<main>
+
+        <header class="masthead">
+                <div class="overlay"></div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                      <div class="page-heading">
+                        <h1>Create New Post</h1>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </header>
+              <ul>
+
+  
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-8 offset-md-2">
+                    <form action="/fileUpload" enctype="multipart/form-data" method="POST">
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                          <label>Title</label>
+                          <input type="text" name="title" placeholder="Title" class="form-control">
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                          <label>category</label>
+
+                          <select >
+                         {{#select status}}
+                            {{#each categories}}
+                    
+                            
+                              <option value="{{name}}" > {{name}} </option>
+                             
+                            {{/each}}
+{{/select}}
+                          
+                         
+                            </select>
+                          
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                          <label>Body</label>
+                          <textarea name="body" placeholder="body ..." cols="30" rows="10" class="form-control"></textarea>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                          <div class="form-group btn btn-primary btn-sm float-left ">
+                            
+                              <input class="btn btn-primary form-control" id="file" type="file" name="image"  />
+                           
+                          </div>
+                        </div>
+                      <div class="form-group my-4 text-center">
+                       
+                        <input class="btn btn-primary" type="submit" value="Create Post" >
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+  <hr>
+
+</main>
+
+</script>
+<script src="/ckeditor/ckeditor.js"></script>
+<script>
+CKEDITOR.replace('body') </script>
+
+
+
+
+
+    
